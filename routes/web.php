@@ -29,5 +29,11 @@ Route::group(['middleware' => 'auth'], function () {
 	Route::get('profile', ['as' => 'profile.edit', 'uses' => 'ProfileController@edit']);
 	Route::put('profile', ['as' => 'profile.update', 'uses' => 'ProfileController@update']);
 	Route::put('profile/password', ['as' => 'profile.password', 'uses' => 'ProfileController@password']);
+
+
+	// Category
+	Route::get('pages/category/index', 'CategoryController@index')->name('category.index');
+	Route::get('pages/category/create', 'CategoryController@create')->name('category.create');
+
 });
 
